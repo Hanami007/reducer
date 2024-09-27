@@ -13,7 +13,18 @@ export default function ListUserComponent({ userList }) {
         <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
           {userList.map((user, index) => (
             <li key={index}>
-              {user.firstName}{user.lastName} - {user.email} - {user.phoneNumber}
+              <div className="b">
+                FirstName : {user.firstName}
+              </div>
+              <div>
+                LastName : {user.lastName}
+              </div>
+              <div>
+                Email : {user.email}
+              </div>
+              <div>
+                Phone : {user.phoneNumber}
+              </div>
             </li>
           ))}
         </ul>
